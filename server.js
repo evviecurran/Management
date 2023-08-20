@@ -16,14 +16,15 @@ const db = mysql.createConnection(
     // MySQL username,
     user: 'root',
     // MySQL password
-    password: '',
-    database: 'classlist_db'
+    password: 'password',
+    database: 'employee_management'
+
   },
-  console.log(`Connected to the classlist_db database.`)
+  console.log(`Connected to the employee_management database.`)
 );
 
 // Query database
-db.query('SELECT * FROM students', function (err, results) {
+db.query('SELECT * FROM employees', function (err, results) {
   console.log(results);
 });
 
